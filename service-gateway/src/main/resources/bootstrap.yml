@@ -1,0 +1,69 @@
+#不管什么模式都会读取的配置文件
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true   #配置启用通过服务名来获取进行路由
+      routes:
+        - id: tm-service-api
+          uri: lb://TM-SERVICE-API
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+
+        - id: tm-service-manage
+          uri: lb://TM-SERVICE-MANAGE
+          predicates:
+            - Path=/manage/**
+          filters:
+            - StripPrefix=1
+    loadbalancer:
+      retry:
+        enable: true
+
+
+# 日志保存的文件夹，配合logback.xml
+logging.file: ${log.path}/${spring.application.name}.log
+logging:
+  file:
+    max-history: 20
+    max-size: '1024MB'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+  level:
+    org.springframework.boot.autoconfigure: INFO
+
+log:
+  path: ./log
+
+#ribbon配置
+ribbon:
+  ServerListRefreshInterval: 5000
+  OkToRetryOnAllOperations: true
+  #(是否所有操作都重试，若false则仅get请求重试)
+  MaxAutoRetriesNextServer: 3
+  #(重试负载均衡其他实例最大重试次数,不含首次实例)
+  MaxAutoRetries: 1
+  #(同一实例最大重试次数,不含首次调用)
+  ReadTimeout: 30000
+  ConnectTimeout: 3000
+  retryableStatusCodes: 404,500,503
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://localhost:9100/eureka
+  instance:
+    prefer-ip-address: true   #以IP地址注册到服务中心
+    hostname: service-gateway
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+
+
+server:
+  port: 9130

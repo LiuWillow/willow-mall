@@ -1,0 +1,86 @@
+2019-12-29 12:52:31.456 default INFO  main  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[postProcessAfterInitialization:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3e66055f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-29 12:52:36.546 default INFO  main  com.lwl.willowmall.gateway.GatewayApplication[logStartupProfileInfo:675] - No active profile set, falling back to default profiles: default
+2019-12-29 12:52:37.114 default INFO  main  org.springframework.cloud.context.scope.GenericScope[setSerializationId:295] - BeanFactory id=dbe6a3bd-348d-3ef1-9923-c8bc742c4d65
+2019-12-29 12:52:37.176 default INFO  main  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[postProcessAfterInitialization:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3e66055f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-29 12:52:37.334 default WARN  main  com.netflix.config.sources.URLConfigurationSource[<init>:121] - No URLs will be polled as dynamic configuration sources.
+2019-12-29 12:52:37.334 default INFO  main  com.netflix.config.sources.URLConfigurationSource[<init>:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-29 12:52:37.338 default WARN  main  com.netflix.config.sources.URLConfigurationSource[<init>:121] - No URLs will be polled as dynamic configuration sources.
+2019-12-29 12:52:37.339 default INFO  main  com.netflix.config.sources.URLConfigurationSource[<init>:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-29 12:52:37.946 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [After]
+2019-12-29 12:52:37.946 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Before]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Between]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Cookie]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Header]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Host]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Method]
+2019-12-29 12:52:37.947 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Path]
+2019-12-29 12:52:37.948 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Query]
+2019-12-29 12:52:37.948 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2019-12-29 12:52:37.948 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [RemoteAddr]
+2019-12-29 12:52:37.948 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [Weight]
+2019-12-29 12:52:37.948 default INFO  main  org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator[lambda$initFactories$1:120] - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2019-12-29 12:52:38.322 default INFO  main  org.springframework.cloud.netflix.eureka.InstanceInfoFactory[create:72] - Setting initial instance status as: STARTING
+2019-12-29 12:52:38.441 default INFO  main  com.netflix.discovery.DiscoveryClient[<init>:349] - Initializing Eureka in region us-east-1
+2019-12-29 12:52:38.601 default INFO  main  com.netflix.discovery.provider.DiscoveryJerseyProvider[<init>:70] - Using JSON encoding codec LegacyJacksonJson
+2019-12-29 12:52:38.602 default INFO  main  com.netflix.discovery.provider.DiscoveryJerseyProvider[<init>:71] - Using JSON decoding codec LegacyJacksonJson
+2019-12-29 12:52:38.698 default INFO  main  com.netflix.discovery.provider.DiscoveryJerseyProvider[<init>:80] - Using XML encoding codec XStreamXml
+2019-12-29 12:52:38.698 default INFO  main  com.netflix.discovery.provider.DiscoveryJerseyProvider[<init>:81] - Using XML decoding codec XStreamXml
+2019-12-29 12:52:38.923 default INFO  main  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver[getClusterEndpoints:43] - Resolving eureka endpoints via configuration
+2019-12-29 12:52:38.940 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:52:38.940 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:52:38.940 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:52:38.941 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:52:38.941 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:52:38.941 default INFO  main  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: true
+2019-12-29 12:52:38.941 default INFO  main  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:52:39.146 default INFO  main  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
+2019-12-29 12:52:39.149 default INFO  main  com.netflix.discovery.DiscoveryClient[initScheduledTasks:1270] - Starting heartbeat executor: renew interval is: 30
+2019-12-29 12:52:39.152 default INFO  main  com.netflix.discovery.InstanceInfoReplicator[<init>:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-29 12:52:39.155 default INFO  main  com.netflix.discovery.DiscoveryClient[<init>:449] - Discovery Client initialized at timestamp 1577595159154 with initial instances count: 0
+2019-12-29 12:52:39.157 default INFO  main  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry[register:41] - Registering application SERVICE-GATEWAY with eureka with status UP
+2019-12-29 12:52:39.157 default INFO  main  com.netflix.discovery.DiscoveryClient[notify:1305] - Saw local status change event StatusChangeEvent [timestamp=1577595159157, current=UP, previous=STARTING]
+2019-12-29 12:52:39.160 default INFO  DiscoveryClient-InstanceInfoReplicator-0  com.netflix.discovery.DiscoveryClient[register:826] - DiscoveryClient_SERVICE-GATEWAY/192.168.3.15:9130: registering service...
+2019-12-29 12:52:39.276 default INFO  DiscoveryClient-InstanceInfoReplicator-0  com.netflix.discovery.DiscoveryClient[register:835] - DiscoveryClient_SERVICE-GATEWAY/192.168.3.15:9130 - registration status: 204
+2019-12-29 12:52:44.152 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: false
+2019-12-29 12:52:44.153 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:52:44.159 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
+2019-12-29 12:52:44.416 default INFO  main  org.springframework.boot.web.embedded.netty.NettyWebServer[start:77] - Netty started on port(s): 9130
+2019-12-29 12:52:44.417 default INFO  main  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration[onApplicationEvent:143] - Updating port to 9130
+2019-12-29 12:52:44.419 default INFO  main  com.lwl.willowmall.gateway.GatewayApplication[logStarted:59] - Started GatewayApplication in 19.606 seconds (JVM running for 25.687)
+2019-12-29 12:52:49.169 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:52:49.170 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:52:49.170 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:52:49.171 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:52:49.171 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:52:49.171 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: false
+2019-12-29 12:52:49.171 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:52:49.176 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
+2019-12-29 12:52:54.181 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:52:54.182 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:52:54.182 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:52:54.182 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:52:54.182 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:52:54.183 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: false
+2019-12-29 12:52:54.183 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:52:54.188 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
+2019-12-29 12:52:59.198 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:52:59.198 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:52:59.199 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:52:59.199 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:52:59.199 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:52:59.199 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: false
+2019-12-29 12:52:59.199 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:52:59.204 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
+2019-12-29 12:53:04.209 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:958] - Disable delta property : false
+2019-12-29 12:53:04.210 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:959] - Single vip registry refresh property : null
+2019-12-29 12:53:04.210 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:960] - Force full registry fetch : false
+2019-12-29 12:53:04.211 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:961] - Application is null : false
+2019-12-29 12:53:04.211 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:962] - Registered Applications size is zero : true
+2019-12-29 12:53:04.211 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[fetchRegistry:964] - Application version is -1: false
+2019-12-29 12:53:04.211 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1047] - Getting all instance registry info from the eureka server
+2019-12-29 12:53:04.254 default INFO  DiscoveryClient-CacheRefreshExecutor-0  com.netflix.discovery.DiscoveryClient[getAndStoreFullRegistry:1056] - The response status is 200
