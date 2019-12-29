@@ -11,6 +11,8 @@
     <modules>
         <module>service-gateway</module>
         <module>service-registration-center</module>
+        <module>service-user</module>
+        <module>service-page</module>
     </modules>
 
     <properties>

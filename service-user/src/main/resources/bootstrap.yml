@@ -1,0 +1,29 @@
+server:
+  port: 9160
+spring:
+  application:
+    name: service-user
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://localhost:9100/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: service-user
+    instanceId: localhost:${server.port}
+
+
+log:
+  path: ./log
+logging.file: ${log.path}/${spring.application.name}.log
+logging:
+  file:
+    max-history: 20
+    max-size: '1024MB'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+  level:
+    org.springframework.boot.autoconfigure: INFO
