@@ -8,13 +8,12 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpCookie;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -24,6 +23,7 @@ import java.util.Set;
  */
 @Order(-1)
 @Slf4j
+@Component
 public class TokenFilter implements GlobalFilter, Ordered {
     private static final String PAGE_PREFIX = "/page";
     /**
@@ -44,10 +44,17 @@ public class TokenFilter implements GlobalFilter, Ordered {
         log.info("携带的cookie信息：{}", JSON.toJSONString(cookies));
         //TODO 过滤下cookie
 
-        return null;
+        return chain.filter(exchange);
     }
 
     public int getOrder() {
         return 0;
+    }
+
+    private class SS{
+        private int ll;
+
+        public void a(){
+        }
     }
 }

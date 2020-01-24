@@ -13,6 +13,9 @@
         <module>service-registration-center</module>
         <module>service-user</module>
         <module>service-page</module>
+        <module>common</module>
+        <module>service-swagger</module>
+        <module>api-mall</module>
     </modules>
 
     <properties>
@@ -28,15 +31,23 @@
         <mysql-connector-java.version>8.0.13</mysql-connector-java.version>
         <mybatis-plus-boot-starter.version>3.0.6</mybatis-plus-boot-starter.version>
         <lombok.version>1.18.4</lombok.version>
-        <swagger2.version>2.6.1</swagger2.version>
         <common.version>1.0-SNAPSHOT</common.version>
         <servlet.version>3.1.0</servlet.version>
         <jwt.version>3.4.1</jwt.version>
         <guava.version>27.0.1-jre</guava.version>
         <alioss.version>2.8.3</alioss.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -75,6 +86,34 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.spring4all</groupId>-->
+            <!--                <artifactId>swagger-spring-boot-starter</artifactId>-->
+            <!--                <version>1.9.1.RELEASE</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

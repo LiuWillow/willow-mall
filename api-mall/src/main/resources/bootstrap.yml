@@ -1,0 +1,30 @@
+server:
+  port: 10001
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://localhost:9100/eureka
+  instance:
+    prefer-ip-address: true   #以IP地址注册到服务中心
+    hostname: api-mall
+    instanceId: localhost:${server.port}
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+
+
+log:
+  path: ./log
+logging.file: ${log.path}/${spring.application.name}.log
+logging:
+  file:
+    max-history: 20
+    max-size: '1024MB'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+  level:
+    org.springframework.boot.autoconfigure: INFO
+
+spring:
+  application:
+    name: api-mall

@@ -1,0 +1,43 @@
+server:
+  port: 10002
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://localhost:9100/eureka
+  instance:
+    prefer-ip-address: true   #以IP地址注册到服务中心
+    hostname: service-swagger
+    instanceId: localhost:${server.port}
+
+
+log:
+  path: ./log
+logging.file: ${log.path}/${spring.application.name}.log
+logging:
+  file:
+    max-history: 20
+    max-size: '1024MB'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName %level %X{IDENTIFIER} %thread %X{URI} %logger[%method:%line] - %msg%n'
+  level:
+    org.springframework.boot.autoconfigure: INFO
+
+spring:
+  application:
+    name: service-swagger
+zuul:
+  routes:
+    - id: service-page  #页面
+      uri: lb://SERVICE-PAGE
+      predicates:
+        - Path=/page/**
+      filters:
+          - StripPrefix=1
+    - id: api-mall  #商城api，前端访问 网关ip:网关端口/api/mall/** 就会转发到 api-mall服务下的 /**
+      uri: lb://API-MALL  #转发到 api-mall 服务下
+      predicates:
+        - Path=/api/mall/**   #匹配到的就转发
+      filters:
+        - StripPrefix=2 #转发的时候，去掉两个前缀，即api和user

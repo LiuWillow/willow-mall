@@ -9,19 +9,19 @@ spring:
         locator:
           enabled: true   #配置启用通过服务名来获取进行路由
       routes:
-        - id: service-user
-          uri: lb://SERVICE-USER   #转发到service-user服务下
-          predicates:
-            - Path=/api/user/**   #匹配到的就转发
-          filters:
-            - StripPrefix=2   #转发的时候，去掉两个前缀，即api和user
-
-        - id: service-page
+        - id: service-page  #页面
           uri: lb://SERVICE-PAGE
           predicates:
             - Path=/page/**
           filters:
             - StripPrefix=1
+
+        - id: api-mall  #商城api，前端访问 网关ip:网关端口/api/mall/** 就会转发到 api-mall服务下的 /**
+          uri: lb://API-MALL  #转发到 api-mall 服务下
+          predicates:
+            - Path=/api/mall/**   #匹配到的就转发
+          filters:
+            - StripPrefix=2 #转发的时候，去掉两个前缀，即api和user
     loadbalancer:
       retry:
         enable: true
@@ -64,6 +64,3 @@ eureka:
     prefer-ip-address: true   #以IP地址注册到服务中心
     hostname: service-gateway
     instanceId: localhost:${server.port}
-
-
-
