@@ -25,4 +25,11 @@ public class Response<T> {
         response.setMsg(ResponseCodeEnum.SUCCESS.getMsg());
         return response;
     }
+
+    public static Response<?> error(ResponseCodeEnum responseCodeEnum) {
+        Response<?> response = new Response<>();
+        response.setCode(responseCodeEnum.getCode());
+        response.setMsg(responseCodeEnum.getMsg());
+        return response;
+    }
 }

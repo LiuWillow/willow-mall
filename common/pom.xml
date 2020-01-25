@@ -2,15 +2,78 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>willow-mall</artifactId>
-        <groupId>com.lwl</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+    <groupId>com.lwl</groupId>
+    <artifactId>common</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <fastjson.version>1.2.56</fastjson.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <mybatis-plus-spring-boot-starter.version>2.2.0</mybatis-plus-spring-boot-starter.version>
+        <mybatisplus.version>2.1.4</mybatisplus.version>
+        <druid.version>1.1.10</druid.version>
+        <mysql-connector-java.version>8.0.13</mysql-connector-java.version>
+        <mybatis-plus-boot-starter.version>3.0.6</mybatis-plus-boot-starter.version>
+        <lombok.version>1.18.4</lombok.version>
+        <common.version>1.0-SNAPSHOT</common.version>
+        <servlet.version>3.1.0</servlet.version>
+        <jwt.version>3.4.1</jwt.version>
+        <guava.version>27.0.1-jre</guava.version>
+        <alioss.version>2.8.3</alioss.version>
+        <swagger.version>2.9.2</swagger.version>
+    </properties>
 
-    <artifactId>common</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <!--常用工具   包括一些字符处理工具等-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+    </dependencies>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

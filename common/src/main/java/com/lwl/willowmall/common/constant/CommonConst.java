@@ -12,4 +12,6 @@ public class CommonConst {
      * 请求成功
      */
     public static final int CODE_SUCCESS = 0;
+
+    public static final String REQUEST_ID = "requestId";
 }

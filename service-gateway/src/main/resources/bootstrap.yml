@@ -25,6 +25,14 @@ spring:
     loadbalancer:
       retry:
         enable: true
+  redis:
+    host: serverhuawei
+    password: 123
+    database: 1
+    port: 6379
+  session:
+    store-type: redis
+
 
 
 # 日志保存的文件夹，配合logback.xml
@@ -64,3 +72,4 @@ eureka:
     prefer-ip-address: true   #以IP地址注册到服务中心
     hostname: service-gateway
     instanceId: localhost:${server.port}
+

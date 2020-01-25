@@ -9,6 +9,7 @@ import com.lwl.willowmall.common.constant.CommonConst;
  */
 public enum ResponseCodeEnum {
     SUCCESS(CommonConst.CODE_SUCCESS, "success"),
+    FAILED(10001, "failed"),
     ;
 
     public int getCode() {
