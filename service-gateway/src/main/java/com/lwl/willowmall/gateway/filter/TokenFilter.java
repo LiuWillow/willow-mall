@@ -20,11 +20,12 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import sun.misc.Unsafe;
 
+import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * author liuweilong
@@ -35,6 +36,7 @@ import java.util.Set;
 @Slf4j
 @Component
 public class TokenFilter implements GlobalFilter {
+    private static Integer[] i = new Integer[]{1, 3, 5};
     private static final String PAGE_PREFIX = "/page";
     /**
      * 不需要拦截的URL列表
@@ -71,6 +73,11 @@ public class TokenFilter implements GlobalFilter {
         //TODO 验证成功，每次请求怎么延长时间
 
         return chain.filter(exchange);
+    }
+
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+        concurrentHashMap.put(1, 1);
     }
 
     /**
